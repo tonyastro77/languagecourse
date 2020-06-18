@@ -1,0 +1,10 @@
+D:\C#.Net\LanguageCourse\LanguageCourse\bin\Debug\LanguageCourse.exe.config
+D:\C#.Net\LanguageCourse\LanguageCourse\bin\Debug\LanguageCourse.exe
+D:\C#.Net\LanguageCourse\LanguageCourse\bin\Debug\LanguageCourse.pdb
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.csprojAssemblyReference.cache
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.Form1.resources
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.Properties.Resources.resources
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.csproj.GenerateResource.cache
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.csproj.CoreCompileInputs.cache
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.exe
+D:\C#.Net\LanguageCourse\LanguageCourse\obj\Debug\LanguageCourse.pdb
