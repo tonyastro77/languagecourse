@@ -10,11 +10,14 @@ namespace LanguageCourse
     {
         public string question;
         public string answer;
+        public string img;
 
-        public Question(string question, string answer)
+
+        public Question(string question, string answer, string img)
         {
             this.question = question;
             this.answer = answer;
+            this.img = img;
         }
     }
 }

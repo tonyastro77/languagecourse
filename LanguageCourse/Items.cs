@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace LanguageCourse
 {
@@ -28,6 +29,11 @@ namespace LanguageCourse
         {
             return list[x].answer;
         }
+
+        public string GetImg(int x)
+        {
+            return list[x].img;
+        }
         public int GetTotalNumber()
         {
             return list.Count;
@@ -35,6 +41,14 @@ namespace LanguageCourse
         public void RemoveAt(int x)
         {
             list.RemoveAt(x);
+        }
+
+        public void ClearList()
+        {
+            for (int x = list.Count - 1; x >= 0; x--)
+            {
+                list.RemoveAt(x);
+            }
         }
 
         public string ShowWrongAnswers()
@@ -46,5 +60,6 @@ namespace LanguageCourse
             }
             return txt;
         }
+     
     }
 }
