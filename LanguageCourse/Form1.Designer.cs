@@ -44,6 +44,9 @@
             this.GoBack = new System.Windows.Forms.Button();
             this.AnswerWrong = new System.Windows.Forms.Button();
             this.MenuPicture = new System.Windows.Forms.PictureBox();
+            this.Berries = new System.Windows.Forms.Button();
+            this.PointsLabel = new System.Windows.Forms.Label();
+            this.LeftLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -224,12 +227,47 @@
             this.MenuPicture.TabIndex = 15;
             this.MenuPicture.TabStop = false;
             // 
+            // Berries
+            // 
+            this.Berries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Berries.Location = new System.Drawing.Point(487, 249);
+            this.Berries.Name = "Berries";
+            this.Berries.Size = new System.Drawing.Size(133, 28);
+            this.Berries.TabIndex = 16;
+            this.Berries.Text = "Berries";
+            this.Berries.UseVisualStyleBackColor = true;
+            this.Berries.Visible = false;
+            this.Berries.Click += new System.EventHandler(this.Berries_Click);
+            // 
+            // PointsLabel
+            // 
+            this.PointsLabel.AutoSize = true;
+            this.PointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PointsLabel.Location = new System.Drawing.Point(12, 249);
+            this.PointsLabel.Name = "PointsLabel";
+            this.PointsLabel.Size = new System.Drawing.Size(86, 29);
+            this.PointsLabel.TabIndex = 17;
+            this.PointsLabel.Text = "Points:";
+            // 
+            // LeftLabel
+            // 
+            this.LeftLabel.AutoSize = true;
+            this.LeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeftLabel.Location = new System.Drawing.Point(12, 283);
+            this.LeftLabel.Name = "LeftLabel";
+            this.LeftLabel.Size = new System.Drawing.Size(105, 29);
+            this.LeftLabel.TabIndex = 18;
+            this.LeftLabel.Text = "Quedan:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.LeftLabel);
+            this.Controls.Add(this.PointsLabel);
+            this.Controls.Add(this.Berries);
             this.Controls.Add(this.MenuPicture);
             this.Controls.Add(this.AnswerWrong);
             this.Controls.Add(this.GoBack);
@@ -274,6 +312,9 @@
         private System.Windows.Forms.Button GoBack;
         private System.Windows.Forms.Button AnswerWrong;
         private System.Windows.Forms.PictureBox MenuPicture;
+        private System.Windows.Forms.Button Berries;
+        private System.Windows.Forms.Label PointsLabel;
+        private System.Windows.Forms.Label LeftLabel;
     }
 }
 

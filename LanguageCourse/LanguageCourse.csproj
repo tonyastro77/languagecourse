@@ -85,6 +85,15 @@
     <Content Include="Img\animals.jpg" />
     <Content Include="Img\ant.jpg" />
     <Content Include="Img\bat.jpg" />
+    <Content Include="Img\berries.jpg" />
+    <Content Include="Img\Berry\blackberry.jpg" />
+    <Content Include="Img\Berry\blackcurrant.jpg" />
+    <Content Include="Img\Berry\blueberry.jpg" />
+    <Content Include="Img\Berry\cherry.png" />
+    <Content Include="Img\Berry\cloudberry.jpg" />
+    <Content Include="Img\Berry\raspberry.jpg" />
+    <Content Include="Img\Berry\redcurrant.jpg" />
+    <Content Include="Img\Berry\strawberry.jpg" />
     <Content Include="Img\bird.jpg" />
     <Content Include="Img\bull.jpg" />
     <Content Include="Img\butterfly.jpg" />

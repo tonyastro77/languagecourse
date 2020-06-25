@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 2;
+        int top_page = 3;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -42,6 +42,8 @@ namespace LanguageCourse
             AnswerButton.Visible = false;
             QuestionLabel.Visible = false;
             AnswerLabel.Visible = false;
+            PointsLabel.Visible = false;
+            LeftLabel.Visible = false;
             Results.Visible = false;
             Forward.Visible = true;
             Back.Visible = true;
@@ -56,6 +58,7 @@ namespace LanguageCourse
             Fruits.Visible = false;
             Animals.Visible = false;
             Kitchen.Visible = false;
+            Berries.Visible = false;
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
             if (page == 0)
@@ -79,6 +82,13 @@ namespace LanguageCourse
                 Fruits.Location = new Point(321, 382);
                 Fruits.Visible = true;
             }
+            else if (page == 3)
+            {
+                LessonLabel.Text = "Lesson 4: Berries";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\berries.jpg");
+                Berries.Location = new Point(321, 382);
+                Berries.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -89,7 +99,7 @@ namespace LanguageCourse
                 {
                     AnswerLabel.Text = "Correct!\nYour answer was " + AnswerBox.Text + "\nand the answer was " + item.GetAnswer(index);
                     AnswerBox.Text = "";
-                    score += 10;
+                    score += 10;                  
                 }
                 else
                 {
@@ -100,6 +110,8 @@ namespace LanguageCourse
                 }
 
                 item.RemoveAt(index);
+                PointsLabel.Text = "Points: " + score.ToString();
+                LeftLabel.Text = "Quedan: " + item.GetTotalNumber().ToString();
                 GameOver();
             }
             else
@@ -108,7 +120,7 @@ namespace LanguageCourse
                 {
                     AnswerLabel.Text = "Correct!\nYour answer was " + AnswerBox.Text + "\nand the answer was " + mistakes.GetAnswer(index);
                     AnswerBox.Text = "";
-                    score += 10;
+                    score += 5;
                 }
                 else
                 {
@@ -116,8 +128,9 @@ namespace LanguageCourse
                     AnswerBox.Text = "";
                     wrong += 1;
                 }
-
                 mistakes.RemoveAt(index);
+                PointsLabel.Text = "Points: " + score.ToString();
+                LeftLabel.Text = "Quedan: " + mistakes.GetTotalNumber().ToString();
                 GameOver();
             }
             
@@ -128,29 +141,39 @@ namespace LanguageCourse
             {
                 if (item.GetTotalNumber() == 0)
                 {
-                    MessageBox.Show("You have completed the answers.");
+                    MessageBox.Show("You have completed the answers. Responde sólo las incorrectas apretando en CONTINUE>");
                     if (wrong == 0)
                     {
                         Results.Text = "Your score is " + score.ToString() + "\nAnd you got zero wrong answers.";
+                        AnswerWrong.Location = new Point(235, 50);
+                        AnswerWrong.Visible = false;
                     }
                     else if (wrong == 1)
                     {
                         Results.Text = "Your score is " + score.ToString() + "\nYou got " + wrong.ToString() + " wrong answer.\nHere is the correct answer:\n" + mistakes.ShowWrongAnswers();
+                        AnswerWrong.Location = new Point(235, 50);
+                        AnswerWrong.Visible = true;
                     }
                     else
                     {
                         Results.Text = "Your score is " + score.ToString() + "\n" + wrong.ToString() + " wrong answers.\nHere are the correct answers:\n" + mistakes.ShowWrongAnswers();
+                        AnswerWrong.Location = new Point(235, 50);
+                        AnswerWrong.Visible = true;
                     }
 
                     //Restart.Location = new Point(348, 151);
                     //Restart.Visible = true;
+                    PointsLabel.Visible = false;
+                    LeftLabel.Visible = false;
                     pictureBox1.Visible = false;
                     AnswerBox.Visible = false;
                     AnswerButton.Visible = false;
                     QuestionLabel.Visible = false;
                     AnswerLabel.Visible = false;
-                    Results.Visible = true;
-                    AnswerWrong.Visible = true;
+                    Results.Location = new Point(230, 81);
+                    Results.Visible = true; 
+                    
+                    
                 }
                 else
                 {
@@ -179,11 +202,14 @@ namespace LanguageCourse
 
                     //Restart.Location = new Point(348, 151);
                     //Restart.Visible = true;
+                    PointsLabel.Visible = false;
+                    LeftLabel.Visible = false;
                     pictureBox1.Visible = false;
                     AnswerBox.Visible = false;
                     AnswerButton.Visible = false;
                     QuestionLabel.Visible = false;
                     AnswerLabel.Visible = false;
+                    Results.Location = new Point(230, 81);
                     Results.Visible = true;
                     AnswerWrong.Visible = false;
                 }
@@ -223,8 +249,7 @@ namespace LanguageCourse
         }
 
         private void Animals_Click(object sender, EventArgs e)
-        {
-            InGameLayout();
+        {          
             Animals.Visible = false;
             item.Add(new Question("elefante", "elephant", "..\\..\\Img\\elephant.png"));
             item.Add(new Question("león", "lion", "..\\..\\Img\\lion.jpg"));
@@ -259,14 +284,15 @@ namespace LanguageCourse
             item.Add(new Question("zebra", "zebra", "..\\..\\Img\\zebra.jpg"));
             item.Add(new Question("pájaro", "bird", "..\\..\\Img\\bird.jpg"));
             item.Add(new Question("pescado", "fish", "..\\..\\Img\\fish.jpg"));
+
+            InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
             QuestionLabel.Text = item.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(item.GetImg(index)); 
         }
 
         private void Kitchen_Click(object sender, EventArgs e)
-        {
-            InGameLayout();
+        {            
             Kitchen.Visible = false;
             item.Add(new Question("tenedor", "fork", "..\\..\\Img\\Kitchen\\fork.jpg"));
             item.Add(new Question("cuchillo", "knife", "..\\..\\Img\\Kitchen\\knife.jpg"));
@@ -281,14 +307,15 @@ namespace LanguageCourse
             item.Add(new Question("horno", "oven", "..\\..\\Img\\Kitchen\\oven.jpg"));
             item.Add(new Question("sartén", "pan", "..\\..\\Img\\Kitchen\\pan.jpg"));
             item.Add(new Question("tostador", "toaster", "..\\..\\Img\\Kitchen\\toaster.jpg"));
+
+            InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
             QuestionLabel.Text = item.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(item.GetImg(index));
         }
 
         private void Fruits_Click(object sender, EventArgs e)
-        {
-            InGameLayout();
+        {           
             Fruits.Visible = false;           
             item.Add(new Question("fruta", "fruit", "..\\..\\Img\\FruitsVeg\\fruit.png"));
             item.Add(new Question("pera", "pear", "..\\..\\Img\\FruitsVeg\\pear.jpg"));
@@ -318,7 +345,27 @@ namespace LanguageCourse
             item.Add(new Question("aceitunas (plural)", "olives", "..\\..\\Img\\FruitsVeg\\olive.jpg"));
             item.Add(new Question("ají", "chilli", "..\\..\\Img\\FruitsVeg\\chilli.jpg"));
 
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
 
+        }
+
+        private void Berries_Click(object sender, EventArgs e)
+        {          
+            Berries.Visible = false;
+            item.Add(new Question("bayas (plural)", "berries", "..\\..\\Img\\berries.jpg"));
+            item.Add(new Question("arándano", "blueberry", "..\\..\\Img\\Berry\\blueberry.jpg"));
+            item.Add(new Question("frambuesa", "raspberry", "..\\..\\Img\\Berry\\raspberry.jpg"));
+            item.Add(new Question("frutilla", "strawberry", "..\\..\\Img\\Berry\\strawberry.jpg"));
+            item.Add(new Question("guinda", "cherry", "..\\..\\Img\\Berry\\cherry.png"));
+            item.Add(new Question("grosella (dos palabras)", "red currant", "..\\..\\Img\\Berry\\redcurrant.jpg"));
+            item.Add(new Question("grosella negra (dos palabras)", "black currant", "..\\..\\Img\\Berry\\blackcurrant.jpg"));
+            item.Add(new Question("mora (una palabra)", "blackberry", "..\\..\\Img\\Berry\\blackberry.jpg"));
+            item.Add(new Question("mora de los pantanos (una palabra y difícil)", "cloudberry", "..\\..\\Img\\Berry\\cloudberry.jpg"));
+
+            InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
             QuestionLabel.Text = item.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(item.GetImg(index));
@@ -335,6 +382,10 @@ namespace LanguageCourse
             AnswerLabel.Visible = true;
             LessonLabel.Visible = false;
             GoBack.Visible = true;
+            PointsLabel.Text = "Points: " + score.ToString();
+            LeftLabel.Text = "Quedan: " + item.GetTotalNumber().ToString();
+            PointsLabel.Visible = true;
+            LeftLabel.Visible = true;
             MenuPicture.Visible = false;
             AnswerLabel.Text = "";
             Results.Text = "";
@@ -378,12 +429,15 @@ namespace LanguageCourse
             AnswerWrong.Visible = false;
             isFirstAttempt = false;
             wrong = 0;
-            score = 0;
             Restart.Visible = false;
             Results.Visible = false;
             index = rnd.Next(0, mistakes.GetTotalNumber());
             QuestionLabel.Text = mistakes.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(mistakes.GetImg(index));
+            PointsLabel.Text = "Points: " + score.ToString();
+            LeftLabel.Text = "Quedan: " + mistakes.GetTotalNumber().ToString();
         }
+
+        
     }
 }
