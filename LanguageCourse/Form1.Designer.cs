@@ -47,6 +47,7 @@
             this.Berries = new System.Windows.Forms.Button();
             this.PointsLabel = new System.Windows.Forms.Label();
             this.LeftLabel = new System.Windows.Forms.Label();
+            this.Chapter1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -259,12 +260,25 @@
             this.LeftLabel.TabIndex = 18;
             this.LeftLabel.Text = "Quedan:";
             // 
+            // Chapter1
+            // 
+            this.Chapter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chapter1.Location = new System.Drawing.Point(487, 284);
+            this.Chapter1.Name = "Chapter1";
+            this.Chapter1.Size = new System.Drawing.Size(133, 28);
+            this.Chapter1.TabIndex = 19;
+            this.Chapter1.Text = "Chapter 1";
+            this.Chapter1.UseVisualStyleBackColor = true;
+            this.Chapter1.Visible = false;
+            this.Chapter1.Click += new System.EventHandler(this.Chapter1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Chapter1);
             this.Controls.Add(this.LeftLabel);
             this.Controls.Add(this.PointsLabel);
             this.Controls.Add(this.Berries);
@@ -315,6 +329,7 @@
         private System.Windows.Forms.Button Berries;
         private System.Windows.Forms.Label PointsLabel;
         private System.Windows.Forms.Label LeftLabel;
+        private System.Windows.Forms.Button Chapter1;
     }
 }
 

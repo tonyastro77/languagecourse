@@ -97,6 +97,25 @@
     <Content Include="Img\bird.jpg" />
     <Content Include="Img\bull.jpg" />
     <Content Include="Img\butterfly.jpg" />
+    <Content Include="Img\Chapter1\chile.jpg" />
+    <Content Include="Img\Chapter1\continent.jpg" />
+    <Content Include="Img\Chapter1\country.jpg" />
+    <Content Include="Img\Chapter1\egypt.jpg" />
+    <Content Include="Img\Chapter1\finland.png" />
+    <Content Include="Img\Chapter1\france.jpg" />
+    <Content Include="Img\Chapter1\french.jpg" />
+    <Content Include="Img\Chapter1\germany.jpg" />
+    <Content Include="Img\Chapter1\greece.jpg" />
+    <Content Include="Img\Chapter1\italy.jpg" />
+    <Content Include="Img\Chapter1\jewish.jpg" />
+    <Content Include="Img\Chapter1\portuguese.png" />
+    <Content Include="Img\Chapter1\russia.jpg" />
+    <Content Include="Img\Chapter1\spain.jpg" />
+    <Content Include="Img\Chapter1\sweden.jpg" />
+    <Content Include="Img\Chapter1\turkey.jpg" />
+    <Content Include="Img\Chapter1\uk.jpg" />
+    <Content Include="Img\Chapter1\us.jpg" />
+    <Content Include="Img\Chapter1\world.jpg" />
     <Content Include="Img\cow.jpg" />
     <Content Include="Img\deer.jpg" />
     <Content Include="Img\donkey.jpg" />
@@ -166,6 +185,7 @@
     <Content Include="Img\squirrel.png" />
     <Content Include="Img\toad.jpg" />
     <Content Include="Img\whale.jpg" />
+    <Content Include="Img\whereyou.jpg" />
     <Content Include="Img\wolf.png" />
     <Content Include="Img\zebra.jpg" />
   </ItemGroup>

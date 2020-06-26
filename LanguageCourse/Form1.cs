@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 3;
+        int top_page = 4;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -59,6 +59,7 @@ namespace LanguageCourse
             Animals.Visible = false;
             Kitchen.Visible = false;
             Berries.Visible = false;
+            Chapter1.Visible = false;
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
             if (page == 0)
@@ -89,6 +90,14 @@ namespace LanguageCourse
                 Berries.Location = new Point(321, 382);
                 Berries.Visible = true;
             }
+            else if (page == 4)
+            {
+                LessonLabel.Text = "Lesson 5: Chapter 1";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\whereyou.jpg");
+                Chapter1.Location = new Point(321, 382);
+                Chapter1.Visible = true;
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -364,6 +373,45 @@ namespace LanguageCourse
             item.Add(new Question("grosella negra (dos palabras)", "black currant", "..\\..\\Img\\Berry\\blackcurrant.jpg"));
             item.Add(new Question("mora (una palabra)", "blackberry", "..\\..\\Img\\Berry\\blackberry.jpg"));
             item.Add(new Question("mora de los pantanos (una palabra y difícil)", "cloudberry", "..\\..\\Img\\Berry\\cloudberry.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+
+        private void Chapter1_Click(object sender, EventArgs e)
+        {
+            Chapter1.Visible = false;
+            item.Add(new Question("país", "country", "..\\..\\Img\\Chapter1\\country.jpg"));
+            item.Add(new Question("continente", "continent", "..\\..\\Img\\Chapter1\\continent.jpg"));
+            item.Add(new Question("mundo", "world", "..\\..\\Img\\\\Chapter1\\world.jpg"));
+            item.Add(new Question("finlandia", "finland", "..\\..\\Img\\\\Chapter1\\finland.png"));
+            item.Add(new Question("alemania", "germany", "..\\..\\Img\\\\Chapter1\\germany.jpg"));
+            item.Add(new Question("francia", "france", "..\\..\\Img\\\\Chapter1\\france.jpg"));
+            item.Add(new Question("estados unidos", "united states", "..\\..\\Img\\\\Chapter1\\us.jpg"));
+            item.Add(new Question("reino unido", "united kingdom", "..\\..\\Img\\\\Chapter1\\uk.jpg"));
+            item.Add(new Question("grecia", "greece", "..\\..\\Img\\\\Chapter1\\greece.jpg"));
+            item.Add(new Question("egipto", "egypt", "..\\..\\Img\\\\Chapter1\\egypt.jpg"));
+            item.Add(new Question("rusia", "russia", "..\\..\\Img\\\\Chapter1\\russia.jpg"));
+            item.Add(new Question("ruso", "russian", "..\\..\\Img\\\\Chapter1\\russia.jpg"));
+            item.Add(new Question("suecia (difícil)", "sweden", "..\\..\\Img\\\\Chapter1\\sweden.jpg"));
+            item.Add(new Question("finlandés", "finnish", "..\\..\\Img\\\\Chapter1\\finland.png"));
+            item.Add(new Question("portugués", "portuguese", "..\\..\\Img\\\\Chapter1\\portuguese.png"));
+            item.Add(new Question("francés", "french", "..\\..\\Img\\\\Chapter1\\french.jpg"));
+            item.Add(new Question("italia", "italy", "..\\..\\Img\\\\Chapter1\\italy.jpg"));
+            item.Add(new Question("italiano", "italian", "..\\..\\Img\\\\Chapter1\\italy.jpg"));
+            item.Add(new Question("español", "spanish", "..\\..\\Img\\\\Chapter1\\spain.jpg"));
+            item.Add(new Question("españa", "spain", "..\\..\\Img\\\\Chapter1\\spain.jpg"));
+            item.Add(new Question("alemán", "german", "..\\..\\Img\\\\Chapter1\\germany.jpg"));
+            item.Add(new Question("judío", "jewish", "..\\..\\Img\\\\Chapter1\\jewish.jpg"));
+            item.Add(new Question("chileno", "chilean", "..\\..\\Img\\\\Chapter1\\chile.jpg"));
+            item.Add(new Question("egipcio", "egyptian", "..\\..\\Img\\\\Chapter1\\egypt.jpg"));
+            item.Add(new Question("griego", "greek", "..\\..\\Img\\\\Chapter1\\greece.jpg"));
+            item.Add(new Question("turquía", "turkey", "..\\..\\Img\\\\Chapter1\\turkey.jpg"));
+            item.Add(new Question("turco", "turkish", "..\\..\\Img\\\\Chapter1\\turkey.jpg"));
+            item.Add(new Question("sueco", "swedish", "..\\..\\Img\\\\Chapter1\\sweden.jpg"));
+
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
