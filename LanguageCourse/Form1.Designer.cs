@@ -48,6 +48,7 @@
             this.PointsLabel = new System.Windows.Forms.Label();
             this.LeftLabel = new System.Windows.Forms.Label();
             this.Chapter1 = new System.Windows.Forms.Button();
+            this.IceCream = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -272,12 +273,25 @@
             this.Chapter1.Visible = false;
             this.Chapter1.Click += new System.EventHandler(this.Chapter1_Click);
             // 
+            // IceCream
+            // 
+            this.IceCream.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IceCream.Location = new System.Drawing.Point(487, 312);
+            this.IceCream.Name = "IceCream";
+            this.IceCream.Size = new System.Drawing.Size(133, 28);
+            this.IceCream.TabIndex = 20;
+            this.IceCream.Text = "Ice Cream";
+            this.IceCream.UseVisualStyleBackColor = true;
+            this.IceCream.Visible = false;
+            this.IceCream.Click += new System.EventHandler(this.IceCream_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.IceCream);
             this.Controls.Add(this.Chapter1);
             this.Controls.Add(this.LeftLabel);
             this.Controls.Add(this.PointsLabel);
@@ -330,6 +344,7 @@
         private System.Windows.Forms.Label PointsLabel;
         private System.Windows.Forms.Label LeftLabel;
         private System.Windows.Forms.Button Chapter1;
+        private System.Windows.Forms.Button IceCream;
     }
 }
 

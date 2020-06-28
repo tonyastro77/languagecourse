@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 4;
+        int top_page = 5;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -60,6 +60,8 @@ namespace LanguageCourse
             Kitchen.Visible = false;
             Berries.Visible = false;
             Chapter1.Visible = false;
+            IceCream.Visible = false;
+
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
             if (page == 0)
@@ -97,7 +99,14 @@ namespace LanguageCourse
                 Chapter1.Location = new Point(321, 382);
                 Chapter1.Visible = true;
             }
-            
+            else if (page == 5)
+            {
+                LessonLabel.Text = "Lesson 6: Buying an ice cream";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\icecream.jpg");
+                IceCream.Location = new Point(321, 382);
+                IceCream.Visible = true;
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -411,6 +420,34 @@ namespace LanguageCourse
             item.Add(new Question("turquía", "turkey", "..\\..\\Img\\\\Chapter1\\turkey.jpg"));
             item.Add(new Question("turco", "turkish", "..\\..\\Img\\\\Chapter1\\turkey.jpg"));
             item.Add(new Question("sueco", "swedish", "..\\..\\Img\\\\Chapter1\\sweden.jpg"));
+
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+
+
+        private void IceCream_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Omite signos de pregunta (?) o la palabra TO para los verbos en tus respuestas");
+            IceCream.Visible = false;
+            item.Add(new Question("helado de crema", "ice cream", "..\\..\\Img\\IceCream\\icecream1.jpg"));
+            item.Add(new Question("querer (verbo)", "want", "..\\..\\Img\\IceCream\\want.jpg"));
+            item.Add(new Question("gustar (verbo)", "like", "..\\..\\Img\\IceCream\\like.jpg"));
+            item.Add(new Question("aquí", "here", "..\\..\\Img\\IceCream\\here.jpg"));
+            item.Add(new Question("ahí, allá", "there", "..\\..\\Img\\IceCream\\there.jpg"));
+            item.Add(new Question("pagar (verbo)", "pay", "..\\..\\Img\\IceCream\\pay.png"));
+            item.Add(new Question("comprar (verbo)", "buy", "..\\..\\Img\\IceCream\\buy.jpg"));
+            item.Add(new Question("costar (verbo)", "cost", "..\\..\\Img\\IceCream\\cost.jpg"));
+            item.Add(new Question("precio", "price", "..\\..\\Img\\IceCream\\price.jpg"));
+            item.Add(new Question("también (empieza con a..)", "also", "..\\..\\Img\\IceCream\\also.jpg"));
+            item.Add(new Question("me gustaría (3 palabras)", "i would like", "..\\..\\Img\\IceCream\\iwouldlike.jpg"));
+            item.Add(new Question("gracias (2 palabras)", "thank you", "..\\..\\Img\\IceCream\\thanks.jpg"));
+            item.Add(new Question("gracias (una palabra)", "thanks", "..\\..\\Img\\IceCream\\thanks.jpg"));
+            item.Add(new Question("para tí (2 palabras)", "for you", "..\\..\\Img\\IceCream\\foryou.jpg"));
+            item.Add(new Question("para mí (2 palabras)", "for me", "..\\..\\Img\\IceCream\\forme.jpg"));
 
 
             InGameLayout();
