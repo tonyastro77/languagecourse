@@ -191,6 +191,7 @@
     <Content Include="Img\mouse.jpg" />
     <Content Include="Img\owl.png" />
     <Content Include="Img\pig.jpg" />
+    <Content Include="Img\question.jpg" />
     <Content Include="Img\rat.jpg" />
     <Content Include="Img\rhino.jpg" />
     <Content Include="Img\shark.jpg" />
@@ -199,6 +200,7 @@
     <Content Include="Img\spider.png" />
     <Content Include="Img\squirrel.png" />
     <Content Include="Img\toad.jpg" />
+    <Content Include="Img\verbs.jpg" />
     <Content Include="Img\whale.jpg" />
     <Content Include="Img\whereyou.jpg" />
     <Content Include="Img\wolf.png" />

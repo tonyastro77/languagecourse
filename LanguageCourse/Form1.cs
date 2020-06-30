@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 5;
+        int top_page = 6;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -61,6 +61,7 @@ namespace LanguageCourse
             Berries.Visible = false;
             Chapter1.Visible = false;
             IceCream.Visible = false;
+            Verbs1.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -87,24 +88,31 @@ namespace LanguageCourse
             }
             else if (page == 3)
             {
-                LessonLabel.Text = "Lesson 4: Berries";
+                LessonLabel.Text = "Lesson 4 : Berries";
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\berries.jpg");
                 Berries.Location = new Point(321, 382);
                 Berries.Visible = true;
             }
             else if (page == 4)
             {
-                LessonLabel.Text = "Lesson 5: Chapter 1";
+                LessonLabel.Text = "Lesson 5 : Chapter 1";
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\whereyou.jpg");
                 Chapter1.Location = new Point(321, 382);
                 Chapter1.Visible = true;
             }
             else if (page == 5)
             {
-                LessonLabel.Text = "Lesson 6: Buying an ice cream";
+                LessonLabel.Text = "Lesson 6 : Buying an ice cream";
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\icecream.jpg");
                 IceCream.Location = new Point(321, 382);
                 IceCream.Visible = true;
+            }
+            else if (page == 6)
+            {
+                LessonLabel.Text = "Lesson 7 : Verbs";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs.jpg");
+                Verbs1.Location = new Point(321, 382);
+                Verbs1.Visible = true;
             }
 
         }
@@ -449,6 +457,31 @@ namespace LanguageCourse
             item.Add(new Question("para tí (2 palabras)", "for you", "..\\..\\Img\\IceCream\\foryou.jpg"));
             item.Add(new Question("para mí (2 palabras)", "for me", "..\\..\\Img\\IceCream\\forme.jpg"));
 
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+
+        private void Verbs1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Omite signos de pregunta (?) o la palabra TO para los verbos en tus respuestas");
+            Verbs1.Visible = false;
+            item.Add(new Question("verbo SER", "be", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("él es", "he is", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("tú eres", "you are", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("nosotros somos", "we are", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("ellos son", "they are", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo HABER/TENER", "have", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo HACER (general)", "do", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo DECIR", "say", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo OBTENER", "get", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo IR", "go", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo HACER/FABRICAR", "make", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo PENSAR", "think", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo DECIR", "say", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo TOMAR/LLEVAR", "take", "..\\..\\Img\\question.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
