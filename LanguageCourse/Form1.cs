@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 6;
+        int top_page = 7;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -62,6 +62,7 @@ namespace LanguageCourse
             Chapter1.Visible = false;
             IceCream.Visible = false;
             Verbs1.Visible = false;
+            Verbs2.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -113,6 +114,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs.jpg");
                 Verbs1.Location = new Point(321, 382);
                 Verbs1.Visible = true;
+            }
+            else if (page == 7)
+            {
+                LessonLabel.Text = "Lesson 8 : Verbs 2";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs.jpg");
+                Verbs2.Location = new Point(321, 382);
+                Verbs2.Visible = true;
             }
 
         }
@@ -489,6 +497,29 @@ namespace LanguageCourse
             pictureBox1.Image = Image.FromFile(item.GetImg(index));
         }
 
+        private void Verbs2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Omite signos de pregunta (?) o la palabra TO para los verbos en tus respuestas");
+            Verbs2.Visible = false;
+            item.Add(new Question("verbo VER", "see", "..\\..\\Img\\Verbs2\\see.jpg"));
+            item.Add(new Question("verbo VENIR", "come", "..\\..\\Img\\Verbs2\\come.jpg"));
+            item.Add(new Question("verbo QUERER", "want", "..\\..\\Img\\Verbs2\\want.jpg"));
+            item.Add(new Question("verbo USAR", "use", "..\\..\\Img\\Verbs2\\use.jpg"));
+            item.Add(new Question("verbo ENCONTRAR", "find", "..\\..\\Img\\Verbs2\\find.jpg"));
+            item.Add(new Question("verbo DAR", "give", "..\\..\\Img\\Verbs2\\give.jpg"));
+            item.Add(new Question("verbo CONTAR (sobre algo)", "tell", "..\\..\\Img\\Verbs2\\tell.jpg"));
+            item.Add(new Question("verbo TRABAJAR", "work", "..\\..\\Img\\Verbs2\\work.jpg"));
+            item.Add(new Question("verbo LLAMAR", "call", "..\\..\\Img\\Verbs2\\call.png"));
+            item.Add(new Question("verbo INTENTAR/TRATAR", "try", "..\\..\\Img\\Verbs2\\try.jpg"));
+            item.Add(new Question("verbo PREGUNTAR", "ask", "..\\..\\Img\\Verbs2\\ask.jpg"));
+            item.Add(new Question("verbo NECESITAR", "need", "..\\..\\Img\\Verbs2\\need.gif"));
+            item.Add(new Question("verbo SENTIR", "feel", "..\\..\\Img\\Verbs2\\feel.jpg"));
+            item.Add(new Question("verbo VOLVERSE, LLEGAR A SER", "become", "..\\..\\Img\\Verbs2\\become.jpg"));
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
         private void InGameLayout()
         {
             Back.Visible = false;
@@ -556,6 +587,6 @@ namespace LanguageCourse
             LeftLabel.Text = "Quedan: " + mistakes.GetTotalNumber().ToString();
         }
 
-        
+      
     }
 }

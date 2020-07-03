@@ -50,6 +50,7 @@
             this.Chapter1 = new System.Windows.Forms.Button();
             this.IceCream = new System.Windows.Forms.Button();
             this.Verbs1 = new System.Windows.Forms.Button();
+            this.Verbs2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -298,12 +299,25 @@
             this.Verbs1.Visible = false;
             this.Verbs1.Click += new System.EventHandler(this.Verbs1_Click);
             // 
+            // Verbs2
+            // 
+            this.Verbs2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Verbs2.Location = new System.Drawing.Point(639, 283);
+            this.Verbs2.Name = "Verbs2";
+            this.Verbs2.Size = new System.Drawing.Size(133, 28);
+            this.Verbs2.TabIndex = 22;
+            this.Verbs2.Text = "Verbs2";
+            this.Verbs2.UseVisualStyleBackColor = true;
+            this.Verbs2.Visible = false;
+            this.Verbs2.Click += new System.EventHandler(this.Verbs2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Verbs2);
             this.Controls.Add(this.Verbs1);
             this.Controls.Add(this.IceCream);
             this.Controls.Add(this.Chapter1);
@@ -360,6 +374,7 @@
         private System.Windows.Forms.Button Chapter1;
         private System.Windows.Forms.Button IceCream;
         private System.Windows.Forms.Button Verbs1;
+        private System.Windows.Forms.Button Verbs2;
     }
 }
 
