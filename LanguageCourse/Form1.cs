@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 7;
+        int top_page = 8;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -63,6 +63,7 @@ namespace LanguageCourse
             IceCream.Visible = false;
             Verbs1.Visible = false;
             Verbs2.Visible = false;
+            Question1.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -121,6 +122,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs.jpg");
                 Verbs2.Location = new Point(321, 382);
                 Verbs2.Visible = true;
+            }
+            else if (page == 8)
+            {
+                LessonLabel.Text = "Lesson 9 : Question words";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\questions1.jpg");
+                Question1.Location = new Point(321, 382);
+                Question1.Visible = true;
             }
 
         }
@@ -520,6 +528,32 @@ namespace LanguageCourse
             QuestionLabel.Text = item.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(item.GetImg(index));
         }
+
+        private void Question1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Omite signos de pregunta (?) en tus respuestas por conveniencia");
+            Question1.Visible = false;
+            item.Add(new Question("quién?", "who", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("cuantos años tienes?", "how old are you", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("cuando?", "when", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("cuál?", "which", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("qué?", "what", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("por qué?", "why", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("de donde eres?", "where are you from", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("donde?", "where", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("de donde?", "from where", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("a donde vas?", "where are you going", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("qué tipo/clase de libro?", "what kind of book", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("éste (apuntando a uno)", "this one", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("ese (apuntando a uno)", "that one", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("cuál de todos?", "which one", "..\\..\\Img\\question.jpg"));
+
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
         private void InGameLayout()
         {
             Back.Visible = false;
@@ -586,7 +620,5 @@ namespace LanguageCourse
             PointsLabel.Text = "Points: " + score.ToString();
             LeftLabel.Text = "Quedan: " + mistakes.GetTotalNumber().ToString();
         }
-
-      
     }
 }

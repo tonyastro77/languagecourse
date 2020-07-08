@@ -51,6 +51,7 @@
             this.IceCream = new System.Windows.Forms.Button();
             this.Verbs1 = new System.Windows.Forms.Button();
             this.Verbs2 = new System.Windows.Forms.Button();
+            this.Question1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -311,12 +312,25 @@
             this.Verbs2.Visible = false;
             this.Verbs2.Click += new System.EventHandler(this.Verbs2_Click);
             // 
+            // Question1
+            // 
+            this.Question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Question1.Location = new System.Drawing.Point(639, 317);
+            this.Question1.Name = "Question1";
+            this.Question1.Size = new System.Drawing.Size(133, 28);
+            this.Question1.TabIndex = 23;
+            this.Question1.Text = "Question Words";
+            this.Question1.UseVisualStyleBackColor = true;
+            this.Question1.Visible = false;
+            this.Question1.Click += new System.EventHandler(this.Question1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Question1);
             this.Controls.Add(this.Verbs2);
             this.Controls.Add(this.Verbs1);
             this.Controls.Add(this.IceCream);
@@ -375,6 +389,7 @@
         private System.Windows.Forms.Button IceCream;
         private System.Windows.Forms.Button Verbs1;
         private System.Windows.Forms.Button Verbs2;
+        private System.Windows.Forms.Button Question1;
     }
 }
 
