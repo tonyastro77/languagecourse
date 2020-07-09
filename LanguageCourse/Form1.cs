@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 8;
+        int top_page = 9;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -64,6 +64,7 @@ namespace LanguageCourse
             Verbs1.Visible = false;
             Verbs2.Visible = false;
             Question1.Visible = false;
+            Verbs3.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -129,6 +130,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\questions1.jpg");
                 Question1.Location = new Point(321, 382);
                 Question1.Visible = true;
+            }
+            else if (page == 9)
+            {
+                LessonLabel.Text = "Lesson 10 : Using some basic verbs";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs3.jpg");
+                Verbs3.Location = new Point(321, 382);
+                Verbs3.Visible = true;
             }
 
         }
@@ -554,6 +562,28 @@ namespace LanguageCourse
             QuestionLabel.Text = item.GetQuestion(index);
             pictureBox1.Image = Image.FromFile(item.GetImg(index));
         }
+
+        private void Verbs3_Click(object sender, EventArgs e)
+        {
+            Verbs3.Visible = false;
+            item.Add(new Question("Vivimos en Santiago", "we live in santiago", "..\\..\\Img\\Verbs3\\santiago.jpg"));
+            item.Add(new Question("Estamos en la casa (hogar)", "we are at home", "..\\..\\Img\\Verbs3\\home.jpg"));
+            item.Add(new Question("Me siento en el sofá", "i sit on the sofa", "..\\..\\Img\\Verbs3\\sofa.jpg"));
+            item.Add(new Question("Veo televisión", "i watch tv", "..\\..\\Img\\Verbs3\\tv.jpg"));
+            item.Add(new Question("Amo cocinar", "i love cooking", "..\\..\\Img\\Verbs3\\cooking.jpg"));
+            item.Add(new Question("Mañana viajamos a cauquenes", "tomorrow we are travelling to cauquenes", "..\\..\\Img\\Verbs3\\cauquenes.jpg"));
+            item.Add(new Question("Yo hablo español", "i speak spanish", "..\\..\\Img\\Verbs3\\spanish.jpg"));
+            item.Add(new Question("La Lily vive en Coronel", "lily lives in coronel", "..\\..\\Img\\Verbs3\\coronel.jpg"));
+            item.Add(new Question("Él baila salsa", "he dances salsa", "..\\..\\Img\\Verbs3\\salsa.jpg"));
+            item.Add(new Question("cómprame un helado", "buy me an ice cream", "..\\..\\Img\\Verbs3\\ice.jpg"));
+            item.Add(new Question("Ellos están cantando karaoke", "they are singing karaoke", "..\\..\\Img\\Verbs3\\karaoke.jpg"));
+            item.Add(new Question("La Andrea se rié", "andrea laughs", "..\\..\\Img\\Verbs3\\andrea.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
         private void InGameLayout()
         {
             Back.Visible = false;
@@ -620,5 +650,7 @@ namespace LanguageCourse
             PointsLabel.Text = "Points: " + score.ToString();
             LeftLabel.Text = "Quedan: " + mistakes.GetTotalNumber().ToString();
         }
+
+        
     }
 }

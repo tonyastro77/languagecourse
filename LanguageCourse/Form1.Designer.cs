@@ -52,6 +52,7 @@
             this.Verbs1 = new System.Windows.Forms.Button();
             this.Verbs2 = new System.Windows.Forms.Button();
             this.Question1 = new System.Windows.Forms.Button();
+            this.Verbs3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -324,12 +325,25 @@
             this.Question1.Visible = false;
             this.Question1.Click += new System.EventHandler(this.Question1_Click);
             // 
+            // Verbs3
+            // 
+            this.Verbs3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Verbs3.Location = new System.Drawing.Point(639, 346);
+            this.Verbs3.Name = "Verbs3";
+            this.Verbs3.Size = new System.Drawing.Size(133, 28);
+            this.Verbs3.TabIndex = 24;
+            this.Verbs3.Text = "Use verbs";
+            this.Verbs3.UseVisualStyleBackColor = true;
+            this.Verbs3.Visible = false;
+            this.Verbs3.Click += new System.EventHandler(this.Verbs3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Verbs3);
             this.Controls.Add(this.Question1);
             this.Controls.Add(this.Verbs2);
             this.Controls.Add(this.Verbs1);
@@ -390,6 +404,7 @@
         private System.Windows.Forms.Button Verbs1;
         private System.Windows.Forms.Button Verbs2;
         private System.Windows.Forms.Button Question1;
+        private System.Windows.Forms.Button Verbs3;
     }
 }
 
