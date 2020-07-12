@@ -123,6 +123,7 @@
     <Content Include="Img\eagle.jpg" />
     <Content Include="Img\elephant.jpg" />
     <Content Include="Img\elephant.png" />
+    <Content Include="Img\email.jpg" />
     <Content Include="Img\fish.jpg" />
     <Content Include="Img\fox.jpg" />
     <Content Include="Img\frog.jpg" />
@@ -229,6 +230,19 @@
     <Content Include="Img\Verbs3\sofa.jpg" />
     <Content Include="Img\Verbs3\spanish.jpg" />
     <Content Include="Img\Verbs3\tv.jpg" />
+    <Content Include="Img\vocabulary.jpg" />
+    <Content Include="Img\Vocabulary1\calendar.jpg" />
+    <Content Include="Img\Vocabulary1\course.jpg" />
+    <Content Include="Img\Vocabulary1\english.jpg" />
+    <Content Include="Img\Vocabulary1\funny.jpg" />
+    <Content Include="Img\Vocabulary1\girlfriend.jpg" />
+    <Content Include="Img\Vocabulary1\greetings.jpg" />
+    <Content Include="Img\Vocabulary1\guitar.jpg" />
+    <Content Include="Img\Vocabulary1\outside.jpg" />
+    <Content Include="Img\Vocabulary1\play.jpg" />
+    <Content Include="Img\Vocabulary1\teacher.jpg" />
+    <Content Include="Img\Vocabulary1\understand.jpg" />
+    <Content Include="Img\Vocabulary1\write.jpg" />
     <Content Include="Img\whale.jpg" />
     <Content Include="Img\whereyou.jpg" />
     <Content Include="Img\wolf.png" />

@@ -53,6 +53,8 @@
             this.Verbs2 = new System.Windows.Forms.Button();
             this.Question1 = new System.Windows.Forms.Button();
             this.Verbs3 = new System.Windows.Forms.Button();
+            this.Email = new System.Windows.Forms.Button();
+            this.Vocabulary1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -337,12 +339,38 @@
             this.Verbs3.Visible = false;
             this.Verbs3.Click += new System.EventHandler(this.Verbs3_Click);
             // 
+            // Email
+            // 
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Location = new System.Drawing.Point(778, 346);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(133, 28);
+            this.Email.TabIndex = 25;
+            this.Email.Text = "Email";
+            this.Email.UseVisualStyleBackColor = true;
+            this.Email.Visible = false;
+            this.Email.Click += new System.EventHandler(this.Email_Click);
+            // 
+            // Vocabulary1
+            // 
+            this.Vocabulary1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vocabulary1.Location = new System.Drawing.Point(778, 317);
+            this.Vocabulary1.Name = "Vocabulary1";
+            this.Vocabulary1.Size = new System.Drawing.Size(133, 28);
+            this.Vocabulary1.TabIndex = 26;
+            this.Vocabulary1.Text = "Vocabulary";
+            this.Vocabulary1.UseVisualStyleBackColor = true;
+            this.Vocabulary1.Visible = false;
+            this.Vocabulary1.Click += new System.EventHandler(this.Vocabulary1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Vocabulary1);
+            this.Controls.Add(this.Email);
             this.Controls.Add(this.Verbs3);
             this.Controls.Add(this.Question1);
             this.Controls.Add(this.Verbs2);
@@ -405,6 +433,8 @@
         private System.Windows.Forms.Button Verbs2;
         private System.Windows.Forms.Button Question1;
         private System.Windows.Forms.Button Verbs3;
+        private System.Windows.Forms.Button Email;
+        private System.Windows.Forms.Button Vocabulary1;
     }
 }
 

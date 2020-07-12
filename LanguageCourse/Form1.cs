@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 9;
+        int top_page = 11;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -65,6 +65,8 @@ namespace LanguageCourse
             Verbs2.Visible = false;
             Question1.Visible = false;
             Verbs3.Visible = false;
+            Email.Visible = false;
+            Vocabulary1.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -137,6 +139,20 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs3.jpg");
                 Verbs3.Location = new Point(321, 382);
                 Verbs3.Visible = true;
+            }
+            else if (page == 10)
+            {
+                LessonLabel.Text = "Chapter 3 : Email to Richard. Texto para traducir";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\email.jpg");
+                Email.Location = new Point(321, 382);
+                Email.Visible = true;
+            }
+            else if (page == 11)
+            {
+                LessonLabel.Text = "Chapter 3 : Vocabulary";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\vocabulary.jpg");
+                Vocabulary1.Location = new Point(321, 382);
+                Vocabulary1.Visible = true;
             }
 
         }
@@ -578,6 +594,70 @@ namespace LanguageCourse
             item.Add(new Question("cómprame un helado", "buy me an ice cream", "..\\..\\Img\\Verbs3\\ice.jpg"));
             item.Add(new Question("Ellos están cantando karaoke", "they are singing karaoke", "..\\..\\Img\\Verbs3\\karaoke.jpg"));
             item.Add(new Question("La Andrea se rié", "andrea laughs", "..\\..\\Img\\Verbs3\\andrea.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+
+        private void Email_Click(object sender, EventArgs e)
+        {
+            Email.Visible = false;
+            Back.Visible = false;
+            Forward.Visible = false;
+            LessonLabel.Visible = false;
+            MenuPicture.Visible = false;
+            GoBack.Visible = true;
+            QuestionLabel.Visible = true;
+            QuestionLabel.Text = "Hello Richard!\n" +
+                "\n" +
+                "Today I am not writing to you in Spanish but in English.\n" +
+                "Hopefully you understand what I write!\n" +
+                "\n" +
+                "It is funny that I live now in England and you live in Spain.\n" +
+                "How are you doing?\n" +
+                "\n" +
+                "I am doing fine. I go to an English course every Monday,\n" +
+                "Wednesday and Friday. Our teacher's name is Brad.\n" +
+                "He is great. My friend Olga and Alex are also in the course.\n" +
+                "\n" +
+                "During the day I am often at home. I read Spanish news and I search for jobs\n" +
+                "on the internet. Sometimes I play the guitar. In the evening I go to the course,\n" +
+                "and my girlfriend is at work.\n" +
+                "\n" +
+                "We live now in a small student apartment. We moved in in August.\n" +
+                "\n" +
+                "Here is warm weather now. It's 25 degrees and is sunny.\n" +
+                "At night is often light outside. How is the weather there?\n" +
+                "\n" +
+                "Greetings from Pedro";
+            
+        }
+
+        private void Vocabulary1_Click(object sender, EventArgs e)
+        {
+            Vocabulary1.Visible = false;
+            item.Add(new Question("hoy", "today", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("verbo ESCRIBIR", "write", "..\\..\\Img\\Vocabulary1\\write.jpg"));
+            item.Add(new Question("inglés", "english", "..\\..\\Img\\Vocabulary1\\english.jpg"));
+            item.Add(new Question("verbo ENTENDER", "understand", "..\\..\\Img\\Vocabulary1\\understand.jpg"));
+            item.Add(new Question("ojalá", "hopefully", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("gracioso, cómico", "funny", "..\\..\\Img\\Vocabulary1\\funny.jpg"));
+            item.Add(new Question("cómo te va? (4 palabras, omite signo (?))", "how are you doing", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("me está yendo bien (4 palabras)", "i am doing fine", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("curso", "course", "..\\..\\Img\\Vocabulary1\\course.jpg"));
+            item.Add(new Question("lunes", "monday", "..\\..\\Img\\Vocabulary1\\calendar.jpg"));
+            item.Add(new Question("miércoles", "wednesday", "..\\..\\Img\\Vocabulary1\\calendar.jpg"));
+            item.Add(new Question("viernes", "friday", "..\\..\\Img\\Vocabulary1\\calendar.jpg"));
+            item.Add(new Question("profesor", "teacher", "..\\..\\Img\\Vocabulary1\\teacher.jpg"));
+            item.Add(new Question("guitarra", "guitar", "..\\..\\Img\\Vocabulary1\\guitar.jpg"));
+            item.Add(new Question("verbo TOCAR (instrumento)", "play", "..\\..\\Img\\Vocabulary1\\play.jpg"));
+            item.Add(new Question("afuera", "outside", "..\\..\\Img\\Vocabulary1\\outside.jpg"));
+            item.Add(new Question("saludos", "greetings", "..\\..\\Img\\Vocabulary1\\greetings.jpg"));
+            item.Add(new Question("a menudo", "often", "..\\..\\Img\\question.jpg"));
+            item.Add(new Question("polola", "girlfriend", "..\\..\\Img\\Vocabulary1\\girlfriend.jpg"));
+            item.Add(new Question("Agosto", "august", "..\\..\\Img\\Vocabulary1\\calendar.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
