@@ -55,6 +55,7 @@
             this.Verbs3 = new System.Windows.Forms.Button();
             this.Email = new System.Windows.Forms.Button();
             this.Vocabulary1 = new System.Windows.Forms.Button();
+            this.Adjectives = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@
             // AnswerBox
             // 
             this.AnswerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerBox.Location = new System.Drawing.Point(230, 151);
+            this.AnswerBox.Location = new System.Drawing.Point(340, 151);
             this.AnswerBox.Name = "AnswerBox";
             this.AnswerBox.Size = new System.Drawing.Size(251, 26);
             this.AnswerBox.TabIndex = 0;
@@ -71,7 +72,7 @@
             // AnswerButton
             // 
             this.AnswerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerButton.Location = new System.Drawing.Point(487, 149);
+            this.AnswerButton.Location = new System.Drawing.Point(597, 149);
             this.AnswerButton.Name = "AnswerButton";
             this.AnswerButton.Size = new System.Drawing.Size(133, 28);
             this.AnswerButton.TabIndex = 1;
@@ -83,7 +84,7 @@
             // 
             this.AnswerLabel.AutoSize = true;
             this.AnswerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerLabel.Location = new System.Drawing.Point(230, 187);
+            this.AnswerLabel.Location = new System.Drawing.Point(340, 187);
             this.AnswerLabel.Name = "AnswerLabel";
             this.AnswerLabel.Size = new System.Drawing.Size(153, 29);
             this.AnswerLabel.TabIndex = 2;
@@ -93,7 +94,7 @@
             // 
             this.QuestionLabel.AutoSize = true;
             this.QuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuestionLabel.Location = new System.Drawing.Point(230, 110);
+            this.QuestionLabel.Location = new System.Drawing.Point(340, 110);
             this.QuestionLabel.Name = "QuestionLabel";
             this.QuestionLabel.Size = new System.Drawing.Size(170, 29);
             this.QuestionLabel.TabIndex = 3;
@@ -112,9 +113,9 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 66);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 179);
+            this.pictureBox1.Size = new System.Drawing.Size(311, 244);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -122,7 +123,7 @@
             // Restart
             // 
             this.Restart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Restart.Location = new System.Drawing.Point(487, 346);
+            this.Restart.Location = new System.Drawing.Point(218, 560);
             this.Restart.Name = "Restart";
             this.Restart.Size = new System.Drawing.Size(133, 28);
             this.Restart.TabIndex = 6;
@@ -134,7 +135,7 @@
             // Animals
             // 
             this.Animals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Animals.Location = new System.Drawing.Point(321, 249);
+            this.Animals.Location = new System.Drawing.Point(52, 463);
             this.Animals.Name = "Animals";
             this.Animals.Size = new System.Drawing.Size(133, 28);
             this.Animals.TabIndex = 7;
@@ -146,7 +147,7 @@
             // Kitchen
             // 
             this.Kitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Kitchen.Location = new System.Drawing.Point(321, 283);
+            this.Kitchen.Location = new System.Drawing.Point(52, 497);
             this.Kitchen.Name = "Kitchen";
             this.Kitchen.Size = new System.Drawing.Size(133, 28);
             this.Kitchen.TabIndex = 8;
@@ -192,7 +193,7 @@
             // Fruits
             // 
             this.Fruits.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fruits.Location = new System.Drawing.Point(321, 312);
+            this.Fruits.Location = new System.Drawing.Point(52, 526);
             this.Fruits.Name = "Fruits";
             this.Fruits.Size = new System.Drawing.Size(133, 28);
             this.Fruits.TabIndex = 12;
@@ -216,7 +217,7 @@
             // AnswerWrong
             // 
             this.AnswerWrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnswerWrong.Location = new System.Drawing.Point(321, 346);
+            this.AnswerWrong.Location = new System.Drawing.Point(52, 560);
             this.AnswerWrong.Name = "AnswerWrong";
             this.AnswerWrong.Size = new System.Drawing.Size(133, 28);
             this.AnswerWrong.TabIndex = 14;
@@ -228,7 +229,7 @@
             // MenuPicture
             // 
             this.MenuPicture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MenuPicture.Location = new System.Drawing.Point(672, 397);
+            this.MenuPicture.Location = new System.Drawing.Point(717, 466);
             this.MenuPicture.Name = "MenuPicture";
             this.MenuPicture.Size = new System.Drawing.Size(468, 319);
             this.MenuPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -238,7 +239,7 @@
             // Berries
             // 
             this.Berries.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Berries.Location = new System.Drawing.Point(487, 249);
+            this.Berries.Location = new System.Drawing.Point(218, 463);
             this.Berries.Name = "Berries";
             this.Berries.Size = new System.Drawing.Size(133, 28);
             this.Berries.TabIndex = 16;
@@ -251,7 +252,7 @@
             // 
             this.PointsLabel.AutoSize = true;
             this.PointsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PointsLabel.Location = new System.Drawing.Point(12, 249);
+            this.PointsLabel.Location = new System.Drawing.Point(12, 313);
             this.PointsLabel.Name = "PointsLabel";
             this.PointsLabel.Size = new System.Drawing.Size(86, 29);
             this.PointsLabel.TabIndex = 17;
@@ -261,7 +262,7 @@
             // 
             this.LeftLabel.AutoSize = true;
             this.LeftLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LeftLabel.Location = new System.Drawing.Point(12, 283);
+            this.LeftLabel.Location = new System.Drawing.Point(12, 347);
             this.LeftLabel.Name = "LeftLabel";
             this.LeftLabel.Size = new System.Drawing.Size(105, 29);
             this.LeftLabel.TabIndex = 18;
@@ -270,7 +271,7 @@
             // Chapter1
             // 
             this.Chapter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chapter1.Location = new System.Drawing.Point(487, 284);
+            this.Chapter1.Location = new System.Drawing.Point(218, 498);
             this.Chapter1.Name = "Chapter1";
             this.Chapter1.Size = new System.Drawing.Size(133, 28);
             this.Chapter1.TabIndex = 19;
@@ -282,7 +283,7 @@
             // IceCream
             // 
             this.IceCream.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IceCream.Location = new System.Drawing.Point(487, 312);
+            this.IceCream.Location = new System.Drawing.Point(218, 526);
             this.IceCream.Name = "IceCream";
             this.IceCream.Size = new System.Drawing.Size(133, 28);
             this.IceCream.TabIndex = 20;
@@ -294,7 +295,7 @@
             // Verbs1
             // 
             this.Verbs1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Verbs1.Location = new System.Drawing.Point(639, 249);
+            this.Verbs1.Location = new System.Drawing.Point(370, 463);
             this.Verbs1.Name = "Verbs1";
             this.Verbs1.Size = new System.Drawing.Size(133, 28);
             this.Verbs1.TabIndex = 21;
@@ -306,7 +307,7 @@
             // Verbs2
             // 
             this.Verbs2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Verbs2.Location = new System.Drawing.Point(639, 283);
+            this.Verbs2.Location = new System.Drawing.Point(370, 497);
             this.Verbs2.Name = "Verbs2";
             this.Verbs2.Size = new System.Drawing.Size(133, 28);
             this.Verbs2.TabIndex = 22;
@@ -318,7 +319,7 @@
             // Question1
             // 
             this.Question1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Question1.Location = new System.Drawing.Point(639, 317);
+            this.Question1.Location = new System.Drawing.Point(370, 531);
             this.Question1.Name = "Question1";
             this.Question1.Size = new System.Drawing.Size(133, 28);
             this.Question1.TabIndex = 23;
@@ -330,7 +331,7 @@
             // Verbs3
             // 
             this.Verbs3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Verbs3.Location = new System.Drawing.Point(639, 346);
+            this.Verbs3.Location = new System.Drawing.Point(370, 560);
             this.Verbs3.Name = "Verbs3";
             this.Verbs3.Size = new System.Drawing.Size(133, 28);
             this.Verbs3.TabIndex = 24;
@@ -342,7 +343,7 @@
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(778, 346);
+            this.Email.Location = new System.Drawing.Point(509, 560);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(133, 28);
             this.Email.TabIndex = 25;
@@ -354,7 +355,7 @@
             // Vocabulary1
             // 
             this.Vocabulary1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vocabulary1.Location = new System.Drawing.Point(778, 317);
+            this.Vocabulary1.Location = new System.Drawing.Point(509, 531);
             this.Vocabulary1.Name = "Vocabulary1";
             this.Vocabulary1.Size = new System.Drawing.Size(133, 28);
             this.Vocabulary1.TabIndex = 26;
@@ -363,12 +364,25 @@
             this.Vocabulary1.Visible = false;
             this.Vocabulary1.Click += new System.EventHandler(this.Vocabulary1_Click);
             // 
+            // Adjectives
+            // 
+            this.Adjectives.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adjectives.Location = new System.Drawing.Point(509, 463);
+            this.Adjectives.Name = "Adjectives";
+            this.Adjectives.Size = new System.Drawing.Size(133, 28);
+            this.Adjectives.TabIndex = 27;
+            this.Adjectives.Text = "Adjectives";
+            this.Adjectives.UseVisualStyleBackColor = true;
+            this.Adjectives.Visible = false;
+            this.Adjectives.Click += new System.EventHandler(this.Adjectives_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Adjectives);
             this.Controls.Add(this.Vocabulary1);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.Verbs3);
@@ -435,6 +449,7 @@
         private System.Windows.Forms.Button Verbs3;
         private System.Windows.Forms.Button Email;
         private System.Windows.Forms.Button Vocabulary1;
+        private System.Windows.Forms.Button Adjectives;
     }
 }
 

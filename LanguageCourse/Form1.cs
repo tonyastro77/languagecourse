@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 11;
+        int top_page = 12;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -67,6 +67,7 @@ namespace LanguageCourse
             Verbs3.Visible = false;
             Email.Visible = false;
             Vocabulary1.Visible = false;
+            Adjectives.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -153,6 +154,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\vocabulary.jpg");
                 Vocabulary1.Location = new Point(321, 382);
                 Vocabulary1.Visible = true;
+            }
+            else if (page == 12)
+            {
+                LessonLabel.Text = "Chapter 3 : Adjectives";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\adjectivee.jpg");
+                Adjectives.Location = new Point(321, 382);
+                Adjectives.Visible = true;
             }
 
         }
@@ -658,6 +666,33 @@ namespace LanguageCourse
             item.Add(new Question("a menudo", "often", "..\\..\\Img\\question.jpg"));
             item.Add(new Question("polola", "girlfriend", "..\\..\\Img\\Vocabulary1\\girlfriend.jpg"));
             item.Add(new Question("Agosto", "august", "..\\..\\Img\\Vocabulary1\\calendar.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+        private void Adjectives_Click(object sender, EventArgs e)
+        {
+            Adjectives.Visible = false;
+            item.Add(new Question("bueno, buena, buen", "good", "..\\..\\Img\\Adjectives\\good.jpg"));
+            item.Add(new Question("malo, mala, mal", "bad", "..\\..\\Img\\Adjectives\\bad.jpg"));
+            item.Add(new Question("caliente", "hot", "..\\..\\Img\\Adjectives\\hot.gif"));
+            item.Add(new Question("frío, fría, helado, helada", "cold", "..\\..\\Img\\Adjectives\\cold.gif"));
+            item.Add(new Question("difícil", "hard", "..\\..\\Img\\Adjectives\\hard.jpg"));
+            item.Add(new Question("fácil", "easy", "..\\..\\Img\\Adjectives\\easy.jpg"));
+            item.Add(new Question("chico, chica", "small", "..\\..\\Img\\Adjectives\\small.jpg"));
+            item.Add(new Question("grande", "big", "..\\..\\Img\\Adjectives\\big.jpg"));
+            item.Add(new Question("nuevo, nueva", "new", "..\\..\\Img\\Adjectives\\new.jpg"));
+            item.Add(new Question("viejo, vieja", "old", "..\\..\\Img\\Adjectives\\old.jpg"));
+            item.Add(new Question("lindo, linda", "pretty", "..\\..\\Img\\Adjectives\\pretty.jpg"));
+            item.Add(new Question("feo, fea", "ugly", "..\\..\\Img\\Adjectives\\ugly.jpg"));
+            item.Add(new Question("claro, clara", "light", "..\\..\\Img\\Adjectives\\light.jpg"));
+            item.Add(new Question("oscuro, oscura", "dark", "..\\..\\Img\\Adjectives\\dark.jpg"));
+            item.Add(new Question("muchos, muchas", "many", "..\\..\\Img\\Adjectives\\many.jpg"));
+            item.Add(new Question("mucho, mucha", "much", "..\\..\\Img\\Adjectives\\much.jpg"));
+            item.Add(new Question("poco, poca (cantidad)", "little", "..\\..\\Img\\Adjectives\\little.jpg"));
+            item.Add(new Question("pocos, pocas (número)", "few", "..\\..\\Img\\Adjectives\\few.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());

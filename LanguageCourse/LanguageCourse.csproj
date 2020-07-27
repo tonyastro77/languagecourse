@@ -82,6 +82,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Img\adjectivee.jpg" />
+    <Content Include="Img\Adjectives\bad.jpg" />
+    <Content Include="Img\Adjectives\big.jpg" />
+    <Content Include="Img\Adjectives\cold.gif" />
+    <Content Include="Img\Adjectives\dark.jpg" />
+    <Content Include="Img\Adjectives\easy.jpg" />
+    <Content Include="Img\Adjectives\few.jpg" />
+    <Content Include="Img\Adjectives\good.jpg" />
+    <Content Include="Img\Adjectives\hard.jpg" />
+    <Content Include="Img\Adjectives\hot.gif" />
+    <Content Include="Img\Adjectives\light.jpg" />
+    <Content Include="Img\Adjectives\little.jpg" />
+    <Content Include="Img\Adjectives\many.jpg" />
+    <Content Include="Img\Adjectives\much.jpg" />
+    <Content Include="Img\Adjectives\new.jpg" />
+    <Content Include="Img\Adjectives\old.jpg" />
+    <Content Include="Img\Adjectives\pretty.jpg" />
+    <Content Include="Img\Adjectives\small.jpg" />
+    <Content Include="Img\Adjectives\ugly.jpg" />
     <Content Include="Img\animals.jpg" />
     <Content Include="Img\ant.jpg" />
     <Content Include="Img\bat.jpg" />
