@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 12;
+        int top_page = 13;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -68,6 +68,7 @@ namespace LanguageCourse
             Email.Visible = false;
             Vocabulary1.Visible = false;
             Adjectives.Visible = false;
+            Months.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -162,7 +163,13 @@ namespace LanguageCourse
                 Adjectives.Location = new Point(321, 382);
                 Adjectives.Visible = true;
             }
-
+            else if (page == 13)
+            {
+                LessonLabel.Text = "Chapter 3 : Months";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\months.jpg");
+                Months.Location = new Point(321, 382);
+                Months.Visible = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -693,6 +700,27 @@ namespace LanguageCourse
             item.Add(new Question("mucho, mucha", "much", "..\\..\\Img\\Adjectives\\much.jpg"));
             item.Add(new Question("poco, poca (cantidad)", "little", "..\\..\\Img\\Adjectives\\little.jpg"));
             item.Add(new Question("pocos, pocas (número)", "few", "..\\..\\Img\\Adjectives\\few.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+        private void Months_Click(object sender, EventArgs e)
+        {
+            Months.Visible = false;
+            item.Add(new Question("Diciembre", "december", "..\\..\\Img\\Months\\dec.gif"));
+            item.Add(new Question("Enero", "january", "..\\..\\Img\\Months\\jan.gif"));
+            item.Add(new Question("Febrero", "february", "..\\..\\Img\\Months\\feb.jpg"));
+            item.Add(new Question("Marzo", "march", "..\\..\\Img\\Months\\mar.jpg"));
+            item.Add(new Question("Abril", "april", "..\\..\\Img\\Months\\apr.jpg"));
+            item.Add(new Question("Mayo", "may", "..\\..\\Img\\Months\\may.jpg"));
+            item.Add(new Question("Junio", "june", "..\\..\\Img\\Months\\jun.jpg"));
+            item.Add(new Question("Julio", "july", "..\\..\\Img\\Months\\jul.jpg"));
+            item.Add(new Question("Agosto", "august", "..\\..\\Img\\Months\\aug.jpg"));
+            item.Add(new Question("Septiembre", "september", "..\\..\\Img\\Months\\sep.jpg"));
+            item.Add(new Question("Octubre", "october", "..\\..\\Img\\Months\\oct.jpg"));
+            item.Add(new Question("Noviembre", "november", "..\\..\\Img\\Months\\nov.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());

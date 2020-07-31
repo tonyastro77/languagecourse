@@ -56,6 +56,7 @@
             this.Email = new System.Windows.Forms.Button();
             this.Vocabulary1 = new System.Windows.Forms.Button();
             this.Adjectives = new System.Windows.Forms.Button();
+            this.Months = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -376,12 +377,25 @@
             this.Adjectives.Visible = false;
             this.Adjectives.Click += new System.EventHandler(this.Adjectives_Click);
             // 
+            // Months
+            // 
+            this.Months.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Months.Location = new System.Drawing.Point(509, 497);
+            this.Months.Name = "Months";
+            this.Months.Size = new System.Drawing.Size(133, 28);
+            this.Months.TabIndex = 28;
+            this.Months.Text = "Months";
+            this.Months.UseVisualStyleBackColor = true;
+            this.Months.Visible = false;
+            this.Months.Click += new System.EventHandler(this.Months_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.Months);
             this.Controls.Add(this.Adjectives);
             this.Controls.Add(this.Vocabulary1);
             this.Controls.Add(this.Email);
@@ -450,6 +464,7 @@
         private System.Windows.Forms.Button Email;
         private System.Windows.Forms.Button Vocabulary1;
         private System.Windows.Forms.Button Adjectives;
+        private System.Windows.Forms.Button Months;
     }
 }
 
