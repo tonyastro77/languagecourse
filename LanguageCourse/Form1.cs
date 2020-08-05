@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 13;
+        int top_page = 14;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -69,6 +69,7 @@ namespace LanguageCourse
             Vocabulary1.Visible = false;
             Adjectives.Visible = false;
             Months.Visible = false;
+            SeasonColor.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -169,6 +170,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\months.jpg");
                 Months.Location = new Point(321, 382);
                 Months.Visible = true;
+            }
+            else if (page == 14)
+            {
+                LessonLabel.Text = "Chapter 3 : Seasons and Colour";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\season.jpg");
+                SeasonColor.Location = new Point(321, 382);
+                SeasonColor.Visible = true;
             }
         }
 
@@ -721,6 +729,31 @@ namespace LanguageCourse
             item.Add(new Question("Septiembre", "september", "..\\..\\Img\\Months\\sep.jpg"));
             item.Add(new Question("Octubre", "october", "..\\..\\Img\\Months\\oct.jpg"));
             item.Add(new Question("Noviembre", "november", "..\\..\\Img\\Months\\nov.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+        private void SeasonColor_Click(object sender, EventArgs e)
+        {
+            SeasonColor.Visible = false;
+            item.Add(new Question("Invierno", "winter", "..\\..\\Img\\SeasonColor\\winter.jpg"));
+            item.Add(new Question("Verano", "summer", "..\\..\\Img\\SeasonColor\\summer.jpg"));
+            item.Add(new Question("Otoño", "autumn", "..\\..\\Img\\SeasonColor\\autumn.jpg"));
+            item.Add(new Question("Primavera", "spring", "..\\..\\Img\\SeasonColor\\spring.jpg"));
+            item.Add(new Question("blanco", "white", "..\\..\\Img\\SeasonColor\\white.jpg"));
+            item.Add(new Question("rojo", "red", "..\\..\\Img\\SeasonColor\\red.jpg"));
+            item.Add(new Question("azul", "blue", "..\\..\\Img\\SeasonColor\\blue.jpg"));
+            item.Add(new Question("verde", "green", "..\\..\\Img\\SeasonColor\\green.jpg"));
+
+            item.Add(new Question("negro", "black", "..\\..\\Img\\SeasonColor\\black.jpg"));
+            item.Add(new Question("café", "brown", "..\\..\\Img\\SeasonColor\\brown.jpg"));
+            item.Add(new Question("gris", "grey", "..\\..\\Img\\SeasonColor\\grey.jpg"));
+            item.Add(new Question("naranjo", "orange", "..\\..\\Img\\SeasonColor\\orange.jpg"));
+            item.Add(new Question("morado", "purple", "..\\..\\Img\\SeasonColor\\purple.jpg"));
+            item.Add(new Question("rosado", "pink", "..\\..\\Img\\SeasonColor\\pink.jpg"));
+            item.Add(new Question("celeste", "light blue (dos palabras)", "..\\..\\Img\\SeasonColor\\lblue.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());

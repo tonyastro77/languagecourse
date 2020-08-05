@@ -57,6 +57,7 @@
             this.Vocabulary1 = new System.Windows.Forms.Button();
             this.Adjectives = new System.Windows.Forms.Button();
             this.Months = new System.Windows.Forms.Button();
+            this.SeasonColor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPicture)).BeginInit();
             this.SuspendLayout();
@@ -389,12 +390,25 @@
             this.Months.Visible = false;
             this.Months.Click += new System.EventHandler(this.Months_Click);
             // 
+            // SeasonColor
+            // 
+            this.SeasonColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SeasonColor.Location = new System.Drawing.Point(218, 594);
+            this.SeasonColor.Name = "SeasonColor";
+            this.SeasonColor.Size = new System.Drawing.Size(133, 28);
+            this.SeasonColor.TabIndex = 29;
+            this.SeasonColor.Text = "Season Colour";
+            this.SeasonColor.UseVisualStyleBackColor = true;
+            this.SeasonColor.Visible = false;
+            this.SeasonColor.Click += new System.EventHandler(this.SeasonColor_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1212, 797);
+            this.Controls.Add(this.SeasonColor);
             this.Controls.Add(this.Months);
             this.Controls.Add(this.Adjectives);
             this.Controls.Add(this.Vocabulary1);
@@ -465,6 +479,7 @@
         private System.Windows.Forms.Button Vocabulary1;
         private System.Windows.Forms.Button Adjectives;
         private System.Windows.Forms.Button Months;
+        private System.Windows.Forms.Button SeasonColor;
     }
 }
 
