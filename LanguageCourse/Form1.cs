@@ -19,7 +19,7 @@ namespace LanguageCourse
         int score = 0;
         int wrong = 0;
         int page = 0;
-        int top_page = 14;
+        int top_page = 15;
         bool isFirstAttempt = true;
 
         public Form1()
@@ -70,6 +70,7 @@ namespace LanguageCourse
             Adjectives.Visible = false;
             Months.Visible = false;
             SeasonColor.Visible = false;
+            Verbs4.Visible = false;
 
             MenuPicture.Location = new Point(152, 55);
             MenuPicture.Visible = true;
@@ -177,6 +178,13 @@ namespace LanguageCourse
                 MenuPicture.Image = Image.FromFile("..\\..\\Img\\season.jpg");
                 SeasonColor.Location = new Point(321, 382);
                 SeasonColor.Visible = true;
+            }
+            else if (page == 15)
+            {
+                LessonLabel.Text = "Chapter 3 : Verbs";
+                MenuPicture.Image = Image.FromFile("..\\..\\Img\\verbs3.jpg");
+                Verbs4.Location = new Point(321, 382);
+                Verbs4.Visible = true;
             }
         }
 
@@ -754,6 +762,41 @@ namespace LanguageCourse
             item.Add(new Question("morado", "purple", "..\\..\\Img\\SeasonColor\\purple.jpg"));
             item.Add(new Question("rosado", "pink", "..\\..\\Img\\SeasonColor\\pink.jpg"));
             item.Add(new Question("celeste", "light blue (dos palabras)", "..\\..\\Img\\SeasonColor\\lblue.jpg"));
+
+            InGameLayout();
+            index = rnd.Next(0, item.GetTotalNumber());
+            QuestionLabel.Text = item.GetQuestion(index);
+            pictureBox1.Image = Image.FromFile(item.GetImg(index));
+        }
+
+        private void Verbs4_Click(object sender, EventArgs e)
+        {
+            Verbs4.Visible = false;
+            item.Add(new Question("escribir", "write", "..\\..\\Img\\Verbs4\\write.jpg"));
+            item.Add(new Question("entender", "understand", "..\\..\\Img\\Verbs4\\understand.jpg"));
+            item.Add(new Question("leer", "read", "..\\..\\Img\\Verbs4\\read.jpg"));
+            item.Add(new Question("buscar (dos palabras)", "look for", "..\\..\\Img\\Verbs4\\lookfor.jpg"));
+            item.Add(new Question("tocar (instrumento musical)", "play", "..\\..\\Img\\Verbs4\\play1.jpg"));
+            item.Add(new Question("jugar", "play", "..\\..\\Img\\Verbs4\\play2.jpg"));
+            item.Add(new Question("cambiarse de casa (hacia la actual casa)", "move in", "..\\..\\Img\\Verbs4\\movein.jpg"));
+            item.Add(new Question("brillar", "shine", "..\\..\\Img\\Verbs4\\shine.gif"));
+            item.Add(new Question("dormir", "sleep", "..\\..\\Img\\Verbs4\\sleep.jpg"));
+            item.Add(new Question("ayudar", "help", "..\\..\\Img\\Verbs4\\help.jpg"));
+            item.Add(new Question("saludar", "greet", "..\\..\\Img\\Verbs4\\greet.jpg"));
+            item.Add(new Question("nevar", "snow", "..\\..\\Img\\Verbs4\\snow.jpg"));
+            item.Add(new Question("llover", "rain", "..\\..\\Img\\Verbs4\\rain.jpg"));
+            item.Add(new Question("hornear", "bake", "..\\..\\Img\\Verbs4\\bake.jpg"));
+            item.Add(new Question("saltar", "jump", "..\\..\\Img\\Verbs4\\jump.gif"));
+            item.Add(new Question("estar de acuerdo", "agree", "..\\..\\Img\\Verbs4\\agree.gif"));
+            item.Add(new Question("aprender", "learn", "..\\..\\Img\\Verbs4\\learn.jpg"));
+            item.Add(new Question("mostrar", "show", "..\\..\\Img\\Verbs4\\show.jpg"));
+            item.Add(new Question("irse", "leave", "..\\..\\Img\\Verbs4\\leave.jpg"));
+            item.Add(new Question("disparar", "shoot", "..\\..\\Img\\Verbs4\\shoot.jpg"));
+            item.Add(new Question("construir", "build", "..\\..\\Img\\Verbs4\\build.jpg"));
+            item.Add(new Question("creer", "believe", "..\\..\\Img\\Verbs4\\believe.jpg"));
+            item.Add(new Question("andar en ski", "ski", "..\\..\\Img\\Verbs4\\ski.jpg"));
+            item.Add(new Question("dibujar", "draw", "..\\..\\Img\\Verbs4\\draw.jpg"));
+            item.Add(new Question("pintar", "paint", "..\\..\\Img\\Verbs4\\paint.jpg"));
 
             InGameLayout();
             index = rnd.Next(0, item.GetTotalNumber());
